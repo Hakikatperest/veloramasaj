@@ -2,49 +2,38 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Esenyurt Masaj | Beylikdüzü Masaj | Velora Masaj</title>
   <meta name="description" content="Esenyurt ve Beylikdüzü masaj hizmetleri. Profesyonel masaj deneyimi için Velora Masaj ile iletişime geçin. Hemen arayın: 0501 549 55 75">
   <meta name="keywords" content="Esenyurt masaj, Beylikdüzü masaj, Esenyurt masaj salonu, Beylikdüzü masaj hizmeti">
-  <meta name="author" content="Velora Masaj">
-  <meta name="robots" content="index, follow">
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://veloramasaj.online">
   <meta property="og:title" content="Velora Masaj – Esenyurt & Beylikdüzü Profesyonel Masaj">
   <meta property="og:description" content="Esenyurt ve Beylikdüzü masaj hizmetleri. Profesyonel masaj deneyimi için Velora Masaj ile iletişime geçin.">
-  <meta property="og:image" content="https://veloramasaj.online/og-image.jpg"> <!-- Varsayılan resim, gerçek resim koyulabilir -->
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Velora Masaj – Esenyurt & Beylikdüzü Masaj">
-  <meta name="twitter:description" content="Esenyurt ve Beylikdüzü masaj hizmetleri. Profesyonel masaj deneyimi için Velora Masaj ile iletişime geçin.">
-  <!-- Preload Poppins & CSS -->
+  <meta property="og:image" content="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200">
+  <!-- Font & CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* RESET & BASE */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(145deg, #f6f9fc 0%, #edf2f9 100%);
       color: #1e2b3c;
-      line-height: 1.6;
-      overflow-x: hidden;
+      line-height: 1.5;
     }
-    /* STICKY HEADER */
+    /* sticky header */
     .sticky-header {
       position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(255, 255, 255, 0.75);
+      top: 0; z-index: 50;
+      background: rgba(255,255,255,0.75);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       box-shadow: 0 10px 30px -10px rgba(0, 20, 30, 0.15);
@@ -52,293 +41,176 @@
       padding: 0.8rem 1.5rem;
     }
     .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
       flex-wrap: wrap;
     }
     .logo {
-      font-size: 1.9rem;
-      font-weight: 700;
+      font-size: 1.9rem; font-weight: 700;
       background: linear-gradient(135deg, #0b2b40, #235b6e);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       background-clip: text;
-      letter-spacing: -0.5px;
     }
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      font-weight: 500;
-    }
+    .nav-links { display: flex; gap: 2rem; font-weight: 500; }
     .nav-links a {
-      text-decoration: none;
-      color: #1e3b4a;
-      font-size: 1.05rem;
-      transition: 0.2s;
-      border-bottom: 2px solid transparent;
+      text-decoration: none; color: #1e3b4a; font-size: 1.05rem;
+      transition: 0.2s; border-bottom: 2px solid transparent;
     }
-    .nav-links a:hover {
-      border-bottom-color: #2d7f8f;
-      color: #0d3b47;
+    .nav-links a:hover { border-bottom-color: #2d7f8f; color: #0d3b47; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    section { padding: 5rem 0; border-bottom: 1px solid rgba(0,0,0,0.03); }
+    section:last-child { border-bottom: none; }
+
+    /* Hero section with background image */
+    #hero {
+      position: relative;
+      padding: 6rem 0;
+      isolation: isolate;
     }
-    /* main container */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=80&auto=format');
+      background-size: cover;
+      background-position: center 30%;
+      filter: brightness(0.75) saturate(1.2);
+      z-index: -2;
     }
-    section {
-      padding: 5rem 0;
-      border-bottom: 1px solid rgba(0,0,0,0.03);
+    #hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(95deg, rgba(10, 30, 40, 0.65) 0%, rgba(10, 40, 50, 0.4) 70%);
+      z-index: -1;
     }
-    section:last-child {
-      border-bottom: none;
+    #hero * {
+      position: relative;
+      z-index: 2;
     }
-    /* headings */
-    h1 {
-      font-size: clamp(2.5rem, 8vw, 4.5rem);
-      font-weight: 700;
-      line-height: 1.2;
-      background: linear-gradient(145deg, #163a47, #1f5f73);
+    #hero h1 {
+      background: linear-gradient(145deg, #f0f7fa, #d4e7ed);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 1rem;
+      text-shadow: 0 5px 15px rgba(0,20,30,0.5);
     }
+    #hero p {
+      color: rgba(255,255,255,0.9);
+      text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
     h2 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin-bottom: 1.2rem;
+      font-size: 2.5rem; font-weight: 600; margin-bottom: 1.2rem;
       background: linear-gradient(135deg, #1b4b5e, #327b8f);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    h3 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: #144f61;
-    }
-    .section-subhead {
-      font-size: 1.2rem;
-      color: #3b5c6b;
-      margin-bottom: 2.5rem;
-      font-weight: 300;
-    }
-    /* CTA */
-    .btn-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin: 2rem 0 1rem;
-    }
+    h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; color: #144f61; }
+    .section-subhead { font-size: 1.2rem; color: #3b5c6b; margin-bottom: 2.5rem; font-weight: 300; }
+
+    /* butonlar - TÜMÜ MAVİ (hemen ara, whatsapp) */
+    .btn-group { display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0 1rem; }
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem 2.2rem;
-      border-radius: 60px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.3s;
-      font-size: 1.2rem;
-      box-shadow: 0 15px 25px -8px rgba(0, 100, 100, 0.2);
-      border: none;
-      cursor: pointer;
-      gap: 10px;
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 1rem 2.2rem; border-radius: 60px; font-weight: 600;
+      text-decoration: none; transition: 0.3s; font-size: 1.2rem;
+      box-shadow: 0 15px 25px -8px rgba(0, 50, 70, 0.3); border: none; gap: 10px;
     }
-    .btn-primary {
-      background: linear-gradient(145deg, #16718b, #0b4f63);
+    .btn-primary, .btn-wa {
+      background: linear-gradient(145deg, #16718b, #0b4f63); /* hepsi aynı mavi */
       color: white;
     }
-    .btn-primary:hover {
+    .btn-primary:hover, .btn-wa:hover {
       background: linear-gradient(145deg, #1d8aa8, #105f77);
       transform: scale(1.05);
-      box-shadow: 0 20px 30px -5px #0a4b5e70;
     }
-    .btn-wa {
-      background: linear-gradient(145deg, #25D366, #128C7E);
-      color: white;
-    }
-    .btn-wa:hover {
-      background: linear-gradient(145deg, #34d974, #1daa9a);
-      transform: scale(1.05);
-    }
-    /* kart tasarımı */
+
+    /* kartlar */
     .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 2rem;
       margin-top: 2.5rem;
     }
     .card {
-      background: rgba(255, 255, 255, 0.5);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 32px;
-      padding: 2rem 1.5rem;
-      box-shadow: 0 25px 45px -18px rgba(20, 60, 80, 0.25);
-      transition: all 0.3s ease;
-      border: 1px solid rgba(255,255,255,0.6);
+      background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px); border-radius: 32px;
+      padding: 2rem 1.5rem; box-shadow: 0 25px 45px -18px rgba(20, 60, 80, 0.25);
+      transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.6);
     }
-    .card:hover {
-      transform: translateY(-12px);
-      background: rgba(255, 255, 255, 0.75);
-      box-shadow: 0 35px 55px -20px #1a4f61b0;
-    }
-    .card h3 {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-    }
-    .card p {
-      color: #2b4d5a;
-      font-weight: 300;
-    }
-    .icon-badge {
-      font-size: 2.5rem;
-      margin-bottom: 0.8rem;
-      opacity: 0.8;
-    }
+    .card:hover { transform: translateY(-12px); background: rgba(255, 255, 255, 0.75); }
+    .icon-badge { font-size: 2.5rem; margin-bottom: 0.8rem; opacity: 0.8; }
+
     /* yorum kartları */
     .testimonial-card {
-      background: white;
-      border-radius: 40px;
-      padding: 2rem;
-      box-shadow: 0 25px 45px -20px #204e5e;
-      border: 1px solid #ffffffaa;
+      background: white; border-radius: 40px; padding: 2rem;
+      box-shadow: 0 25px 45px -20px #204e5e; border: 1px solid #ffffffaa;
     }
-    .stars {
-      color: #f4b740;
-      font-size: 1.5rem;
-      letter-spacing: 4px;
-      margin-bottom: 0.5rem;
-    }
-    .customer-name {
-      font-weight: 600;
-      color: #05455c;
-      margin-top: 1rem;
-    }
+    .stars { color: #f4b740; font-size: 1.5rem; letter-spacing: 4px; margin-bottom: 0.5rem; }
+    .customer-name { font-weight: 600; color: #05455c; margin-top: 1rem; }
+
     /* bölge metni */
     .region-text {
-      background: rgba(255,255,255,0.4);
-      backdrop-filter: blur(4px);
-      border-radius: 48px;
-      padding: 2.5rem;
-      font-size: 1.2rem;
+      background: rgba(255,255,255,0.4); backdrop-filter: blur(4px);
+      border-radius: 48px; padding: 2.5rem; font-size: 1.2rem;
       border: 1px solid white;
     }
-    /* iletişim */
-    .contact-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2.5rem;
-      align-items: center;
-    }
-    .contact-info {
-      flex: 1 1 250px;
-    }
-    .contact-info p {
-      font-size: 1.4rem;
-      margin: 1rem 0;
-    }
-    .map-container {
-      flex: 2 1 400px;
-      border-radius: 48px;
-      overflow: hidden;
-      box-shadow: 0 30px 40px -20px #08252e;
-      border: 3px solid white;
-      height: 280px;
-    }
-    .map-container iframe {
+
+    /* GÖRSEL BÖLÜMÜ - Neden Velora Masaj üzerine yerleştirildi */
+    .full-width-image {
       width: 100%;
-      height: 100%;
-      border: 0;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 48px;
+      box-shadow: 0 35px 55px -25px #0a3845;
+      border: 5px solid white;
+      margin: 2rem 0 1rem 0;
+      transition: transform 0.3s ease;
     }
-    /* sticky whatsapp + telefon */
+    .full-width-image:hover {
+      transform: scale(1.01);
+    }
+
+    /* fixed whatsapp/telefon - ikisi de mavi */
     .fixed-buttons {
-      position: fixed;
-      bottom: 30px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      z-index: 99;
+      position: fixed; bottom: 30px; right: 20px;
+      display: flex; flex-direction: column; gap: 15px; z-index: 99;
     }
     .fixed-btn {
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
-      background: white;
-      box-shadow: 0 10px 25px rgba(0,80,100,0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      text-decoration: none;
-      color: white;
-      transition: 0.2s;
-      border: 2px solid white;
+      width: 65px; height: 65px; border-radius: 50%;
+      box-shadow: 0 10px 25px rgba(0,80,100,0.5); display: flex;
+      align-items: center; justify-content: center; font-size: 2rem;
+      text-decoration: none; color: white; transition: 0.2s; border: 2px solid white;
     }
-    .fixed-btn.phone {
+    /* her iki buton da aynı mavi */
+    .fixed-btn.phone, .fixed-btn.whatsapp {
       background: linear-gradient(145deg, #16718b, #0b4f63);
-    }
-    .fixed-btn.whatsapp {
-      background: linear-gradient(145deg, #25D366, #128C7E);
     }
     .fixed-btn:hover {
       transform: scale(1.1) rotate(5deg);
+      background: linear-gradient(145deg, #1d8aa8, #105f77);
     }
-    /* footer / schema */
-    .footer-note {
-      text-align: center;
-      padding: 2rem 0 1rem;
-      color: #3e6575;
-      font-weight: 300;
-    }
-    /* fade-up animasyonu */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .fade-up.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    /* mobil uyum */
+
+    /* footer */
+    .footer-note { text-align: center; padding: 2rem 0 1rem; color: #3e6575; font-weight: 300; }
+
+    /* fade-up animasyon */
+    .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-up.active { opacity: 1; transform: translateY(0); }
+
+    /* mobil */
     @media (max-width: 700px) {
-      .sticky-header {
-        padding: 0.8rem 1rem;
-      }
-      .nav-links {
-        gap: 1.2rem;
-        font-size: 0.9rem;
-      }
-      h2 {
-        font-size: 2rem;
-      }
-      .btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-      }
-      .fixed-btn {
-        width: 55px;
-        height: 55px;
-        font-size: 1.7rem;
-      }
-    }
-    /* lazy loading için blur (görsel yok, sadece iframe için demo) */
-    iframe {
-      transition: filter 0.4s;
+      .sticky-header { padding: 0.5rem 1rem; }
+      .nav-links { gap: 1rem; font-size: 0.9rem; }
+      h2 { font-size: 2rem; }
+      .btn { padding: 0.8rem 1.5rem; font-size: 1rem; }
+      .fixed-btn { width: 55px; height: 55px; font-size: 1.7rem; }
+      #hero { padding: 4rem 0; }
+      .full-width-image { max-height: 250px; }
     }
   </style>
 </head>
 <body>
-  <!-- Sticky header -->
   <header class="sticky-header">
     <div class="nav-container">
       <span class="logo">VELORA MASAJ</span>
@@ -352,15 +224,14 @@
     </div>
   </header>
 
-  <!-- Sabit WhatsApp & Telefon butonları -->
   <div class="fixed-buttons">
     <a href="tel:+905015495575" class="fixed-btn phone" aria-label="Hemen Ara">📞</a>
     <a href="https://wa.me/905015495575" target="_blank" class="fixed-btn whatsapp" aria-label="WhatsApp">💬</a>
   </div>
 
   <main>
-    <!-- 1️⃣ Hero -->
-    <section id="hero" class="container" style="padding-top: 2rem;">
+    <!-- 1 Hero -->
+    <section id="hero" class="container" style="padding-top: 3rem; padding-bottom: 5rem;">
       <div class="fade-up">
         <h1>Esenyurt & Beylikdüzü<br>Profesyonel Masaj Hizmeti</h1>
         <p style="font-size: 1.5rem; font-weight: 300; max-width: 700px;">Masaj ile yenilenin, uzman terapistlerle rahatlayın.</p>
@@ -371,62 +242,35 @@
       </div>
     </section>
 
-    <!-- 2️⃣ Hizmetler -->
+    <!-- 2 Hizmetler -->
     <section id="hizmetler" class="container">
       <h2 class="fade-up">Masaj Çeşitlerimiz</h2>
       <div class="section-subhead fade-up">Size özel dokunuşlar, tamamen profesyonel</div>
       <div class="card-grid">
-        <div class="card fade-up">
-          <div class="icon-badge">💆‍♂️</div>
-          <h3>Klasik Masaj</h3>
-          <p>Geleneksel tekniklerle tüm vücut rahatlaması, stres azaltıcı etki.</p>
-        </div>
-        <div class="card fade-up">
-          <div class="icon-badge">🧘</div>
-          <h3>Relax Masaj</h3>
-          <p>Yumuşak dokunuşlarla zihin ve beden gevşemesi, huzurlu bir deneyim.</p>
-        </div>
-        <div class="card fade-up">
-          <div class="icon-badge">🌸</div>
-          <h3>Aromaterapi Masajı</h3>
-          <p>Doğal yağlar eşliğinde duyulara hitap eden, yenileyici terapi.</p>
-        </div>
-        <div class="card fade-up">
-          <div class="icon-badge">💪</div>
-          <h3>Derin Doku Masajı</h3>
-          <p>Kronik gerginliklere yönelik, kasları hedef alan güçlü masaj.</p>
-        </div>
+        <div class="card fade-up"><div class="icon-badge">💆‍♂️</div><h3>Klasik Masaj</h3><p>Geleneksel tekniklerle tüm vücut rahatlaması, stres azaltıcı etki.</p></div>
+        <div class="card fade-up"><div class="icon-badge">🧘</div><h3>Relax Masaj</h3><p>Yumuşak dokunuşlarla zihin ve beden gevşemesi, huzurlu bir deneyim.</p></div>
+        <div class="card fade-up"><div class="icon-badge">🌸</div><h3>Aromaterapi Masajı</h3><p>Doğal yağlar eşliğinde duyulara hitap eden, yenileyici terapi.</p></div>
+        <div class="card fade-up"><div class="icon-badge">💪</div><h3>Derin Doku Masajı</h3><p>Kronik gerginliklere yönelik, kasları hedef alan güçlü masaj.</p></div>
       </div>
     </section>
 
-    <!-- 3️⃣ Neden Velora Masaj -->
+    <!-- GÖRSEL - Neden Velora Masaj bölümünün hemen üstünde (eski alt görsel) -->
+    <div class="container" style="padding-top: 0; padding-bottom: 0;">
+      <img class="full-width-image fade-up" src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1200&q=80&auto=format" alt="Profesyonel masaj uygulaması, rahatlatıcı an" loading="lazy">
+    </div>
+
+    <!-- 3 Neden Velora (görsel hemen üstte kaldı) -->
     <section id="neden" class="container">
       <h2 class="fade-up">Neden Velora Masaj?</h2>
       <div class="card-grid">
-        <div class="card fade-up">
-          <div class="icon-badge">🏅</div>
-          <h3>Profesyonel Hizmet</h3>
-          <p>Sertifikalı terapistler, alanında uzun yıllara dayanan deneyim.</p>
-        </div>
-        <div class="card fade-up">
-          <div class="icon-badge">🧼</div>
-          <h3>Hijyenik Ortam</h3>
-          <p>Her seanstan sonra dezenfekte edilen özel masaj odaları.</p>
-        </div>
-        <div class="card fade-up">
-          <div class="icon-badge">👥</div>
-          <h3>Deneyimli Terapistler</h3>
-          <p>10+ yıl tecrübeli, sürekli eğitim alan profesyonel ekip.</p>
-        </div>
-        <div class="card fade-up">
-          <div class="icon-badge">⚡</div>
-          <h3>Hızlı Randevu</h3>
-          <p>Telefonla anında randevu, beklemeden hizmet.</p>
-        </div>
+        <div class="card fade-up"><div class="icon-badge">🏅</div><h3>Profesyonel Hizmet</h3><p>Sertifikalı terapistler, alanında uzun yıllara dayanan deneyim.</p></div>
+        <div class="card fade-up"><div class="icon-badge">🧼</div><h3>Hijyenik Ortam</h3><p>Her seanstan sonra dezenfekte edilen özel masaj odaları.</p></div>
+        <div class="card fade-up"><div class="icon-badge">👥</div><h3>Deneyimli Terapistler</h3><p>10+ yıl tecrübeli, sürekli eğitim alan profesyonel ekip.</p></div>
+        <div class="card fade-up"><div class="icon-badge">⚡</div><h3>Hızlı Randevu</h3><p>Telefonla anında randevu, beklemeden hizmet.</p></div>
       </div>
     </section>
 
-    <!-- 4️⃣ Hizmet Bölgeleri + SEO Metni -->
+    <!-- 4 Hizmet Bölgeleri (SEO metni) -->
     <section id="bolgeler" class="container">
       <h2 class="fade-up">Hizmet Bölgelerimiz</h2>
       <div class="region-text fade-up">
@@ -436,43 +280,33 @@
       </div>
     </section>
 
-    <!-- 5️⃣ Müşteri Yorumları -->
+    <!-- 5 Müşteri Yorumları -->
     <section id="yorumlar" class="container">
       <h2 class="fade-up">Müşteri Yorumları</h2>
       <div class="card-grid">
-        <div class="testimonial-card fade-up">
-          <div class="stars">★★★★★</div>
-          <p>“Esenyurt'ta bulduğum en iyi masaj salonu. Kesinlikle profesyonel ve hijyenik. Derin doku masajı harikaydı.”</p>
-          <div class="customer-name">— Mehmet S.</div>
-        </div>
-        <div class="testimonial-card fade-up">
-          <div class="stars">★★★★★</div>
-          <p>“Beylikdüzü'nde yaşıyorum, aromaterapi masajı için uğradım. Çok rahatlatıcı, terapistler çok deneyimli.”</p>
-          <div class="customer-name">— Elif K.</div>
-        </div>
-        <div class="testimonial-card fade-up">
-          <div class="stars">★★★★★</div>
-          <p>“Hızlı randevu, güler yüz, temizlik… Velora Masaj her şeyiyle 10 numara. Kesinlikle tavsiye ederim.”</p>
-          <div class="customer-name">— Ahmet T.</div>
-        </div>
+        <div class="testimonial-card fade-up"><div class="stars">★★★★★</div><p>“Esenyurt'ta bulduğum en iyi masaj salonu. Kesinlikle profesyonel ve hijyenik. Derin doku masajı harikaydı.”</p><div class="customer-name">— Mehmet S.</div></div>
+        <div class="testimonial-card fade-up"><div class="stars">★★★★★</div><p>“Beylikdüzü'nde yaşıyorum, aromaterapi masajı için uğradım. Çok rahatlatıcı, terapistler çok deneyimli.”</p><div class="customer-name">— Elif K.</div></div>
+        <div class="testimonial-card fade-up"><div class="stars">★★★★★</div><p>“Hızlı randevu, güler yüz, temizlik… Velora Masaj her şeyiyle 10 numara. Kesinlikle tavsiye ederim.”</p><div class="customer-name">— Ahmet T.</div></div>
       </div>
     </section>
 
-    <!-- 6️⃣ İletişim + Maps -->
+    <!-- 6 İletişim (maps yok, sadece iletişim bilgisi) -->
     <section id="iletisim" class="container" style="padding-bottom: 4rem;">
       <h2 class="fade-up">İletişim</h2>
-      <div class="contact-row fade-up">
-        <div class="contact-info">
-          <p style="font-weight: 600;">📞 <a href="tel:+905015495575" style="text-decoration: none; color:#0b4f63;">0501 549 55 75</a></p>
-          <p>📍 Esenyurt / Beylikdüzü, İstanbul</p>
-          <div class="btn-group" style="margin-top: 1rem;">
+      <div class="contact-visual-row fade-up" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+        <div class="contact-info" style="flex: 1 1 300px;">
+          <p style="font-weight: 600; font-size: 1.8rem;">📞 <a href="tel:+905015495575" style="text-decoration: none; color:#0b4f63;">0501 549 55 75</a></p>
+          <p style="font-size: 1.4rem;">📍 Esenyurt / Beylikdüzü</p>
+          <div class="btn-group" style="margin-top: 1.5rem;">
             <a href="tel:+905015495575" class="btn btn-primary">Hemen Ara</a>
             <a href="https://wa.me/905015495575" target="_blank" class="btn btn-wa">WhatsApp Yaz</a>
           </div>
         </div>
-        <div class="map-container">
-          <!-- Google Maps embed: Esenyurt / Beylikdüzü arası bir konum -->
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48177.85387720999!2d28.6269302662789!3d41.02644985180135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b55fadf4ab2e99%3A0x7b12b2b13e7cdab4!2sEsenyurt%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1710456789012!5m2!1str!2str" loading="lazy" title="Velora Masaj Konumu"></iframe>
+        <!-- iletişimde ekstra görsel yok, çünkü görsel yukarı taşındı -->
+        <div style="flex: 1 1 300px; background: rgba(255,255,255,0.3); border-radius: 40px; padding: 2rem; backdrop-filter: blur(5px);">
+          <p style="font-weight: 400;">✉️ bilgi@veloramasaj.online</p>
+          <p style="font-weight: 400;">🕒 Hafta içi 08:00 - 22:00</p>
+          <p style="font-weight: 400;">Cumartesi-Pazar açık</p>
         </div>
       </div>
     </section>
@@ -482,13 +316,13 @@
     <p>© 2025 Velora Masaj | Esenyurt & Beylikdüzü Profesyonel Masaj Hizmeti</p>
   </footer>
 
-  <!-- JSON-LD LocalBusiness Schema -->
+  <!-- JSON-LD LocalBusiness -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Velora Masaj",
-    "image": "https://veloramasaj.online/og-image.jpg",
+    "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200",
     "url": "https://veloramasaj.online",
     "telephone": "+905015495575",
     "priceRange": "₺₺",
@@ -496,53 +330,31 @@
       "@type": "PostalAddress",
       "addressLocality": "Esenyurt",
       "addressRegion": "İstanbul",
-      "addressCountry": "TR",
-      "streetAddress": "Merkez Mah. Esenyurt/İstanbul"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 41.0265,
-      "longitude": 28.6269
+      "addressCountry": "TR"
     },
     "areaServed": [
-      {
-        "@type": "City",
-        "name": "Esenyurt"
-      },
-      {
-        "@type": "City",
-        "name": "Beylikdüzü"
-      }
+      {"@type": "City", "name": "Esenyurt"},
+      {"@type": "City", "name": "Beylikdüzü"}
     ],
     "description": "Esenyurt ve Beylikdüzü masaj hizmetleri. Profesyonel masaj deneyimi için Velora Masaj ile iletişime geçin.",
     "openingHours": "Mo-Su 10:00-22:00"
   }
   </script>
 
-  <!-- Scroll animation (fade-up) -->
+  <!-- Scroll animasyonu observer -->
   <script>
     (function() {
-      // Intersection Observer ile fade-up
       const fadeElements = document.querySelectorAll('.fade-up');
-      
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('active');
-            // İsteğe bağlı: bir kere aktif oldu mu tekrar gözlemleme
             observer.unobserve(entry.target);
           }
         });
       }, { threshold: 0.2, rootMargin: '0px 0px -20px 0px' });
-
       fadeElements.forEach(el => observer.observe(el));
-
-      // Hızlı açılış için bazı elementler hemen görünür olabilir (ilk yükleme)
-      // ama observer onları zaten kontrol eder.
-      
-      // ek olarak sticky header menü tıklanınca kapatma vs gerekmez.
     })();
   </script>
-  <!-- lazy loading resim yok ama iframe zaten lazy -->
 </body>
 </html>
