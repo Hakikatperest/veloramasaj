@@ -1,393 +1,1581 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Esenyurt Masaj | Beylikdüzü Masaj | Velora Masaj</title>
-  <meta name="description" content="Esenyurt ve Beylikdüzü masaj hizmetleri. Profesyonel masaj deneyimi için Velora Masaj ile iletişime geçin. Hemen arayın: 0501 549 55 75">
-  <meta name="keywords" content="Esenyurt masaj, Beylikdüzü masaj, Esenyurt masaj salonu, Beylikdüzü masaj hizmeti">
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://veloramasaj.online">
-  <meta property="og:title" content="Velora Masaj – Esenyurt & Beylikdüzü Profesyonel Masaj">
-  <meta property="og:description" content="Esenyurt ve Beylikdüzü masaj hizmetleri. Profesyonel masaj deneyimi için Velora Masaj ile iletişime geçin.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200">
-  <!-- Font & CSS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(145deg, #f6f9fc 0%, #edf2f9 100%);
-      color: #1e2b3c;
-      line-height: 1.6;
-    }
-    /* sticky header */
-    .sticky-header {
-      position: sticky;
-      top: 0; z-index: 50;
-      background: rgba(255,255,255,0.75);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      box-shadow: 0 10px 30px -10px rgba(0, 20, 30, 0.15);
-      border-bottom: 1px solid rgba(255,255,255,0.6);
-      padding: 0.8rem 1.5rem;
-    }
-    .nav-container {
-      max-width: 1200px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .logo {
-      font-size: 1.9rem; font-weight: 700;
-      background: linear-gradient(135deg, #0b2b40, #235b6e);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .nav-links { display: flex; gap: 2rem; font-weight: 500; }
-    .nav-links a {
-      text-decoration: none; color: #1e3b4a; font-size: 1.05rem;
-      transition: 0.2s; border-bottom: 2px solid transparent;
-    }
-    .nav-links a:hover { border-bottom-color: #2d7f8f; color: #0d3b47; }
-
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-    section { padding: 5rem 0; border-bottom: 1px solid rgba(0,0,0,0.03); }
-    section:last-child { border-bottom: none; }
-
-    /* Hero section with background image */
-    #hero {
-      position: relative;
-      padding: 6rem 0;
-      isolation: isolate;
-    }
-    #hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=80&auto=format');
-      background-size: cover;
-      background-position: center 30%;
-      filter: brightness(0.75) saturate(1.2);
-      z-index: -2;
-    }
-    #hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(95deg, rgba(10, 30, 40, 0.65) 0%, rgba(10, 40, 50, 0.4) 70%);
-      z-index: -1;
-    }
-    #hero * {
-      position: relative;
-      z-index: 2;
-    }
-    #hero h1 {
-      background: linear-gradient(145deg, #f0f7fa, #d4e7ed);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-shadow: 0 5px 15px rgba(0,20,30,0.5);
-    }
-    #hero p {
-      color: rgba(255,255,255,0.9);
-      text-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    }
-
-    h2 {
-      font-size: 2.5rem; font-weight: 600; margin-bottom: 1.2rem;
-      background: linear-gradient(135deg, #1b4b5e, #327b8f);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; color: #144f61; }
-    .section-subhead { font-size: 1.2rem; color: #3b5c6b; margin-bottom: 2.5rem; font-weight: 300; }
-
-    /* butonlar */
-    .btn-group { display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0 1rem; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      padding: 1rem 2.2rem; border-radius: 60px; font-weight: 600;
-      text-decoration: none; transition: 0.3s; font-size: 1.2rem;
-      box-shadow: 0 15px 25px -8px rgba(0, 50, 70, 0.3); border: none; gap: 10px;
-    }
-    .btn-primary {
-      background: linear-gradient(145deg, #1e8cae, #0f6c8a);
-      color: white;
-    }
-    .btn-primary:hover {
-      background: linear-gradient(145deg, #2ba0c4, #1a7b9c);
-      transform: scale(1.05);
-    }
-    .btn-wa {
-      background: linear-gradient(145deg, #25D366, #128C7E);
-      color: white;
-    }
-    .btn-wa:hover {
-      background: linear-gradient(145deg, #34d974, #1daa9a);
-      transform: scale(1.05);
-    }
-
-    /* kartlar */
-    .card-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;
-      margin-top: 2.5rem;
-    }
-    .card {
-      background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px); border-radius: 32px;
-      padding: 2rem 1.5rem; box-shadow: 0 25px 45px -18px rgba(20, 60, 80, 0.25);
-      transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.6);
-    }
-    .card:hover { transform: translateY(-12px); background: rgba(255, 255, 255, 0.75); }
-    .icon-badge { font-size: 2.5rem; margin-bottom: 0.8rem; opacity: 0.8; }
-
-    /* yorum kartları */
-    .testimonial-card {
-      background: white; border-radius: 40px; padding: 2rem;
-      box-shadow: 0 25px 45px -20px #204e5e; border: 1px solid #ffffffaa;
-    }
-    .stars { color: #f4b740; font-size: 1.5rem; letter-spacing: 4px; margin-bottom: 0.5rem; }
-    .customer-name { font-weight: 600; color: #05455c; margin-top: 1rem; }
-
-    /* bölge metni - makale stili */
-    .region-text, .article-text {
-      background: rgba(255,255,255,0.4); backdrop-filter: blur(4px);
-      border-radius: 48px; padding: 2.5rem; font-size: 1.1rem;
-      border: 1px solid white;
-    }
-    .article-text p { margin-bottom: 1.2rem; }
-
-    /* GÖRSEL - Neden Velora Masaj üzerine */
-    .full-width-image {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 48px;
-      box-shadow: 0 35px 55px -25px #0a3845;
-      border: 5px solid white;
-      margin: 2rem 0 1rem 0;
-      transition: transform 0.3s ease;
-    }
-    .full-width-image:hover {
-      transform: scale(1.01);
-    }
-
-    /* fixed butonlar */
-    .fixed-buttons {
-      position: fixed; bottom: 30px; right: 20px;
-      display: flex; flex-direction: column; gap: 15px; z-index: 99;
-    }
-    .fixed-btn {
-      width: 65px; height: 65px; border-radius: 50%;
-      box-shadow: 0 10px 25px rgba(0,80,100,0.5); display: flex;
-      align-items: center; justify-content: center; font-size: 2rem;
-      text-decoration: none; color: white; transition: 0.2s; border: 2px solid white;
-    }
-    .fixed-btn.phone {
-      background: linear-gradient(145deg, #1e8cae, #0f6c8a);
-    }
-    .fixed-btn.whatsapp {
-      background: linear-gradient(145deg, #25D366, #128C7E);
-    }
-    .fixed-btn:hover {
-      transform: scale(1.1) rotate(5deg);
-    }
-
-    /* footer */
-    .footer-note { text-align: center; padding: 2rem 0 1rem; color: #3e6575; font-weight: 300; }
-
-    /* fade-up animasyon */
-    .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
-    .fade-up.active { opacity: 1; transform: translateY(0); }
-
-    /* mobil */
-    @media (max-width: 700px) {
-      .sticky-header { padding: 0.5rem 1rem; }
-      .nav-links { gap: 1rem; font-size: 0.9rem; }
-      h2 { font-size: 2rem; }
-      .btn { padding: 0.8rem 1.5rem; font-size: 1rem; }
-      .fixed-btn { width: 55px; height: 55px; font-size: 1.7rem; }
-      #hero { padding: 4rem 0; }
-      .full-width-image { max-height: 250px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esenyurt Masaj | Beylikdüzü Masaj | Velora Masaj - 0501 549 55 75</title>
+    <meta name="description" content="Esenyurt ve Beylikdüzü'nde profesyonel masaj hizmeti. Klasik, relax, aromaterapi ve derin doku masajı. Hemen ara: 0501 549 55 75. Hijyenik ortam, uzman terapistler.">
+    <meta name="keywords" content="esenyurt masaj, beylikdüzü masaj, esenyurt masaj salonu, beylikdüzü masaj hizmeti, klasik masaj, aromaterapi, derin doku masajı, relax masaj">
+    <meta name="author" content="Velora Masaj">
+    
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="Velora Masaj - Esenyurt & Beylikdüzü Profesyonel Masaj Hizmeti">
+    <meta property="og:description" content="Esenyurt ve Beylikdüzü'nde 7/24 profesyonel masaj hizmeti. Hemen ara: 0501 549 55 75.">
+    <meta property="og:type" content="website">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #C8A27A; /* Krem/pastel altın - masaj sektörü için sıcak renk */
+            --secondary-color: #2C3E50; /* Koyu lacivert - profesyonellik */
+            --accent-color: #3498DB; /* Açık mavi - hemen ara butonları için */
+            --light-color: #f8f9fa;
+            --dark-color: #1A2634;
+            --gray-color: #6c757d;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --gradient-primary: linear-gradient(135deg, #C8A27A 0%, #B58B69 100%); /* Krem gradient */
+            --gradient-secondary: linear-gradient(135deg, #2C3E50 0%, #1A2634 100%); /* Lacivert gradient */
+            --gradient-blue: linear-gradient(135deg, #3498DB 0%, #2980B9 100%); /* Mavi gradient */
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Mavi buton (acil/ara butonları için) */
+        .btn-primary {
+            background: var(--gradient-blue);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #2980B9 0%, #21618C 100%);
+        }
+        
+        /* Krem buton (ikincil butonlar için) */
+        .btn-secondary {
+            background: var(--gradient-primary);
+            color: #fff;
+        }
+        
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #B58B69 0%, #A07454 100%);
+        }
+        
+        .btn-center {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .btn-wave-effect::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn-wave-effect:hover::after {
+            left: 100%;
+        }
+        
+        section {
+            padding: 90px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            display: inline-block;
+            padding-bottom: 15px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-primary);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--gray-color);
+            max-width: 700px;
+            margin: 15px auto 0;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: var(--gradient-secondary);
+            padding: 18px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--primary-color);
+        }
+        
+        /* Desktop Navigation */
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        .desktop-nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        .desktop-nav ul li {
+            margin-left: 30px;
+            position: relative;
+        }
+        
+        .desktop-nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
+        }
+        
+        .desktop-nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .desktop-nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+        
+        .desktop-nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        /* Mobile Navigation */
+        .mobile-nav-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+            background: rgba(200, 162, 122, 0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 320px;
+            height: 100vh;
+            background: var(--gradient-secondary);
+            z-index: 1001;
+            padding: 100px 30px 30px;
+            transition: var(--transition);
+            box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
+            border-left: 3px solid var(--primary-color);
+        }
+        
+        .mobile-nav.active {
+            right: 0;
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+        }
+        
+        .mobile-nav ul li {
+            margin-bottom: 20px;
+        }
+        
+        .mobile-nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            display: block;
+            padding: 15px 20px;
+            border-radius: 8px;
+            transition: var(--transition);
+            background: rgba(200, 162, 122, 0.05);
+            border: 1px solid rgba(200, 162, 122, 0.1);
+        }
+        
+        .mobile-nav ul li a:hover {
+            background: rgba(200, 162, 122, 0.15);
+            color: var(--primary-color);
+            transform: translateX(10px);
+        }
+        
+        .mobile-nav-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            font-size: 1.8rem;
+            color: white;
+            cursor: pointer;
+            background: rgba(200, 162, 122, 0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Hero Section - Masaj temalı */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 25px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero h1 span {
+            color: var(--primary-color);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: #fff;
+        }
+        
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 35px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border: 2px solid rgba(200, 162, 122, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-color);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-primary);
+        }
+        
+        .service-icon {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+        
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .service-card p {
+            color: var(--gray-color);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        
+        .service-card .btn-primary {
+            display: inline-block;
+            margin: 0 auto;
+        }
+        
+        /* Reviews Section */
+        .reviews {
+            background-color: #f8fafc;
+        }
+        
+        .reviews-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .review-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 2px solid rgba(200, 162, 122, 0.1);
+        }
+        
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-color);
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .reviewer-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .reviewer-name h4 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+        
+        .review-date {
+            color: var(--gray-color);
+            font-size: 0.9rem;
+        }
+        
+        .review-stars {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .review-text {
+            color: var(--dark-color);
+            line-height: 1.6;
+            font-style: italic;
+            border-left: 3px solid var(--primary-color);
+            padding-left: 15px;
+        }
+        
+        /* Image Gallery Section */
+        .gallery {
+            background-color: white;
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 300px;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* SEO Article Section */
+        .seo-article {
+            background-color: white;
+        }
+        
+        .article-container {
+            background: white;
+            border-radius: 15px;
+            padding: 50px;
+            box-shadow: var(--shadow);
+            border: 2px solid rgba(200, 162, 122, 0.1);
+        }
+        
+        .article-title {
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+        }
+        
+        .article-content h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .article-content p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .article-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .article-content li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .highlight-box {
+            background: rgba(200, 162, 122, 0.1);
+            border-left: 5px solid var(--primary-color);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .highlight-box h4 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            background-color: #f8fafc;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 25px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 2px solid rgba(200, 162, 122, 0.1);
+        }
+        
+        .faq-question {
+            background: white;
+            color: var(--secondary-color);
+            padding: 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+            border-bottom: 2px solid rgba(200, 162, 122, 0.1);
+        }
+        
+        .faq-question:hover {
+            background: rgba(200, 162, 122, 0.05);
+        }
+        
+        .faq-question h3 {
+            color: var(--secondary-color);
+            margin: 0;
+            font-size: 1.3rem;
+        }
+        
+        .faq-answer {
+            background-color: white;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .faq-answer.active {
+            padding: 30px;
+            max-height: 500px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: white;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 50px;
+        }
+        
+        .contact-item {
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            transition: var(--transition);
+            border: 2px solid rgba(200, 162, 122, 0.1);
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-item i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .contact-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .contact-item p {
+            color: #555;
+        }
+        
+        /* Popular Searches Section */
+        .popular-searches {
+            background-color: #f8fafc;
+            padding: 90px 0;
+        }
+        
+        .searches-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .search-tag {
+            display: inline-block;
+            background: white;
+            color: var(--secondary-color);
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            border: 2px solid rgba(200, 162, 122, 0.2);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .search-tag:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            color: var(--primary-color);
+        }
+        
+        .search-tag i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #bdc3c7;
+            padding: 60px 0 25px;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 25px;
+        }
+        
+        .footer-logo span {
+            color: var(--primary-color);
+        }
+        
+        .footer-copyright {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .footer-author {
+            margin-top: 15px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        .footer-author a {
+            color: #C8A27A;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .footer-author a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Floating Action Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .floating-btn {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            position: relative;
+        }
+        
+        .floating-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .floating-btn.whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #1ebe5d 100%);
+        }
+        
+        .floating-btn.whatsapp:hover {
+            background: linear-gradient(135deg, #1ebe5d 0%, #25D366 100%);
+        }
+        
+        /* WhatsApp mesaj balonu */
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 75px;
+            background: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            white-space: nowrap;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            opacity: 1;
+            transform: translateX(0);
+            pointer-events: none;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.7);
+            }
+            100% {
+                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            }
+        }
+        
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -8px;
+            transform: translateY(-50%);
+            border-width: 8px 0 8px 8px;
+            border-style: solid;
+            border-color: transparent transparent transparent #25D366;
+        }
+        
+        .floating-btn.call {
+            background: var(--gradient-blue);
+        }
+        
+        .floating-btn.call:hover {
+            background: linear-gradient(135deg, #2980B9 0%, #21618C 100%);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+            
+            .article-container {
+                padding: 40px 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+            
+            .mobile-nav-toggle {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            section {
+                padding: 70px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .floating-buttons {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .floating-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.5rem;
+            }
+            
+            .whatsapp-tooltip {
+                font-size: 12px;
+                padding: 8px 15px;
+                right: 65px;
+            }
+            
+            .article-container {
+                padding: 30px 20px;
+            }
+            
+            .article-content h3 {
+                font-size: 1.5rem;
+            }
+            
+            .service-card .btn-primary {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+            
+            .services-list, .reviews-container, .gallery-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .logo {
+                font-size: 1.6rem;
+            }
+            
+            .contact-item {
+                min-width: 100%;
+            }
+            
+            .searches-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .search-tag {
+                width: 90%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header class="sticky-header">
-    <div class="nav-container">
-      <span class="logo">VELORA MASAJ</span>
-      <nav class="nav-links">
-        <a href="#hizmetler">Hizmetler</a>
-        <a href="#neden">Neden Biz</a>
-        <a href="#bolgeler">Bölgeler</a>
-        <a href="#yorumlar">Yorumlar</a>
-        <a href="#makaleler">Makaleler</a>
-        <a href="#iletisim">İletişim</a>
-      </nav>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#home" class="logo">Velora <span>Masaj</span></a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#home">Ana Sayfa</a></li>
+                    <li><a href="#services">Hizmetler</a></li>
+                    <li><a href="#gallery">Galeri</a></li>
+                    <li><a href="#reviews">Yorumlar</a></li>
+                    <li><a href="#faq">SSS</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Navigation Toggle -->
+            <div class="mobile-nav-toggle" id="mobileNavToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav" id="mobileNav">
+                <div class="mobile-nav-close" id="mobileNavClose">
+                    <i class="fas fa-times"></i>
+                </div>
+                <ul>
+                    <li><a href="#home">Ana Sayfa</a></li>
+                    <li><a href="#services">Hizmetler</a></li>
+                    <li><a href="#gallery">Galeri</a></li>
+                    <li><a href="#reviews">Yorumlar</a></li>
+                    <li><a href="#faq">SSS</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Esenyurt & Beylikdüzü'nde <span>7/24</span> Profesyonel Masaj</h1>
+            <p>Velora Masaj olarak Esenyurt ve Beylikdüzü'nde 7/24 hizmetinizdeyiz. Klasik masaj, relax, aromaterapi ve derin doku masajı seçeneklerimizle yanınızdayız. Hijyenik ortam, uzman terapistler ve uygun fiyat garantisi.</p>
+            
+            <div class="btn-center">
+                <a href="tel:905015495575" class="btn btn-primary btn-wave-effect">
+                    <i class="fas fa-phone-alt"></i> Hemen Ara: 0501 549 55 75
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Masaj Çeşitlerimiz</h2>
+                <p>Esenyurt ve Beylikdüzü'nde sunduğumuz profesyonel masaj hizmetleri ile rahatlamanın tadını çıkarın.</p>
+            </div>
+            
+            <div class="services-list">
+                <!-- Klasik Masaj -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Klasik Masaj</h3>
+                    <p>Geleneksel tekniklerle tüm vücut rahatlaması, stres azaltıcı etki. Kas gerginliklerini giderir, kan dolaşımını hızlandırır.</p>
+                    <a href="tel:905015495575" class="btn btn-primary">Hemen Ara</a>
+                </div>
+                
+                <!-- Relax Masaj -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Relax Masaj</h3>
+                    <p>Yumuşak dokunuşlarla zihin ve beden gevşemesi. Günlük stres ve yorgunluğu atmak için ideal bir terapi.</p>
+                    <a href="tel:905015495575" class="btn btn-primary">Hemen Ara</a>
+                </div>
+                
+                <!-- Aromaterapi Masajı -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Aromaterapi Masajı</h3>
+                    <p>Doğal yağlar eşliğinde duyulara hitap eden, yenileyici terapi. Lavanta, nane ve okaliptüs yağları ile rahatlama.</p>
+                    <a href="tel:905015495575" class="btn btn-primary">Hemen Ara</a>
+                </div>
+                
+                <!-- Derin Doku Masajı -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Derin Doku Masajı</h3>
+                    <p>Kronik gerginliklere yönelik, kasları hedef alan güçlü masaj. Sporcular ve yoğun fiziksel aktivite yapanlar için ideal.</p>
+                    <a href="tel:905015495575" class="btn btn-primary">Hemen Ara</a>
+                </div>
+                
+                <!-- Sıcak Taş Masajı -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>Sıcak Taş Masajı</h3>
+                    <p>Volkanik taşların sıcaklığı ile kasların derinlemesine gevşemesi. Kan dolaşımını hızlandırır, toksinlerin atılmasını sağlar.</p>
+                    <a href="tel:905015495575" class="btn btn-primary">Hemen Ara</a>
+                </div>
+                
+                <!-- Hamile Masajı -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-fetus"></i>
+                    </div>
+                    <h3>Hamile Masajı</h3>
+                    <p>Hamilelik döneminde oluşan bel, sırt ve bacak ağrılarını hafifletmek için özel tekniklerle uygulanan masaj.</p>
+                    <a href="tel:905015495575" class="btn btn-primary">Hemen Ara</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Salonumuzdan Kareler</h2>
+                <p>Hijyenik ve konforlu masaj salonumuzdan görüntüler</p>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80&auto=format" alt="Velora Masaj salonu görseli 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&q=80&auto=format" alt="Velora Masaj salonu görseli 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519823551278-64ac92734ab1?w=600&q=80&auto=format" alt="Velora Masaj salonu görseli 3">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-title">
+                <h2>Müşteri Yorumları</h2>
+                <p>Hizmet kalitemizi müşterilerimizin yorumlarından öğrenin</p>
+            </div>
+            
+            <div class="reviews-container">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">MA</div>
+                            <div class="reviewer-name">
+                                <h4>Mehmet Arslan</h4>
+                                <div class="review-date">15 Şubat 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        "Esenyurt'ta masaj ihtiyacım olduğunda her zaman 0501 549 55 75'i arıyorum. Profesyonel hizmet, hijyenik ortam ve uzman terapistler. Kesinlikle tavsiye ediyorum."
+                    </div>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">AY</div>
+                            <div class="reviewer-name">
+                                <h4>Ayşe Yılmaz</h4>
+                                <div class="review-date">30 Ocak 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        "Beylikdüzü'nde aromaterapi masajı için geldim. Kullandıkları yağlar çok kaliteli, ortam çok rahatlatıcı. Bir dahaki sefere de tercih edeceğim."
+                    </div>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">HŞ</div>
+                            <div class="reviewer-name">
+                                <h4>Hasan Şahin</h4>
+                                <div class="review-date">22 Aralık 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        "Yoğun iş temposu nedeniyle bel fıtığı sorunum vardı. Derin doku masajı sayesinde çok rahatladım. Terapistler gerçekten uzman."
+                    </div>
+                </div>
+                
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">FD</div>
+                            <div class="reviewer-name">
+                                <h4>Fatma Demir</h4>
+                                <div class="review-date">10 Ocak 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        "Hamilelik döneminde çok zorlanıyordum. Hamile masajı sayesinde bel ve bacak ağrılarımdan kurtuldum. Çok teşekkürler Velora Masaj."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SEO Article Section -->
+    <section class="seo-article" id="seo-article">
+        <div class="container">
+            <div class="section-title">
+                <h2>Esenyurt & Beylikdüzü Masaj Rehberi</h2>
+                <p>Esenyurt ve Beylikdüzü'nde güvenilir masaj hizmeti arayanlar için kapsamlı rehber</p>
+            </div>
+            
+            <div class="article-container">
+                <h2 class="article-title">Velora Masaj: Esenyurt ve Beylikdüzü'nde Profesyonel Masaj Hizmeti</h2>
+                
+                <div class="article-content">
+                    <p><strong>Esenyurt masaj</strong> hizmetleri, bölgenin en önemli sağlıklı yaşam ihtiyaçlarından biridir. <strong>Esenyurt masaj salonu</strong> arayanlar için doğru adres Velora Masaj'dır. Esenyurt merkezden en ücra mahallelere kadar 7/24 hizmet veren profesyonel terapistlerimiz, masaj tekniklerini ve vücut anatomisini çok iyi bilmektedir.</p>
+                    
+                    <h3>Esenyurt Masaj Numarası Neden Önemli?</h3>
+                    <p><strong>Esenyurt masaj numarası 0501 549 55 75</strong>, acil durumlarda veya planlı randevularda en güvenilir iletişim kanalıdır. Telefonunuzda kayıtlı olan bu numara sayesinde, istediğiniz zaman masaj randevusu alabilir, stresli gününüzü rahatlamaya dönüştürebilirsiniz.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Velora Masaj Avantajları</h4>
+                        <ul>
+                            <li><strong>7/24 Kesintisiz Hizmet:</strong> Gece-gündüz demeden hizmet veriyoruz</li>
+                            <li><strong>Uzman Terapistler:</strong> Sertifikalı ve deneyimli profesyonel ekip</li>
+                            <li><strong>Hijyenik Ortam:</strong> Her seanstan sonra dezenfekte edilen özel masaj odaları</li>
+                            <li><strong>Uygun Fiyat Politikası:</strong> Şeffaf ve rekabetçi fiyatlandırma</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Beylikdüzü Masaj ve Merkezi Konum</h3>
+                    <p><strong>Beylikdüzü masaj</strong> hizmetimiz, Beylikdüzü merkez başta olmak üzere Marmara Park, Gürpınar ve Yakuplu bölgelerini kapsamaktadır. En pratik çözüm, <strong>Beylikdüzü masaj hizmeti</strong> için telefonla çağrı merkezimizi aramaktır. Telefon ettiğiniz anda size en yakın randevu oluşturulur.</p>
+                    
+                    <h3>Velora Masaj Hizmetleri</h3>
+                    <p><strong>Esenyurt masaj salonu</strong> ve <strong>Beylikdüzü masaj salonu</strong> olarak sunduğumuz hizmetler oldukça çeşitlidir:</p>
+                    
+                    <ul>
+                        <li><strong>Klasik Masaj:</strong> Geleneksel tekniklerle tüm vücut rahatlaması</li>
+                        <li><strong>Relax Masaj:</strong> Yumuşak dokunuşlarla zihin ve beden gevşemesi</li>
+                        <li><strong>Aromaterapi Masajı:</strong> Doğal yağlar eşliğinde duyulara hitap eden terapi</li>
+                        <li><strong>Derin Doku Masajı:</strong> Kronik gerginliklere yönelik güçlü masaj</li>
+                        <li><strong>Sıcak Taş Masajı:</strong> Volkanik taşlarla derinlemesine gevşeme</li>
+                        <li><strong>Hamile Masajı:</strong> Hamilelik dönemi ağrılarını hafifletmek için özel uygulama</li>
+                    </ul>
+                    
+                    <h3>En Yakın Masaj Salonu Nasıl Bulunur?</h3>
+                    <p><strong>Esenyurt en yakın masaj salonu</strong> ihtiyacınız olduğunda yapmanız gereken tek şey <strong>0501 549 55 75</strong> numarasını aramaktır. Randevu merkezimiz, size en yakın randevuyu oluşturacak ve en kısa sürede hizmet almanızı sağlayacaktır.</p>
+                    
+                    <h3>Güvenilir Masaj Salonu Nasıl Anlaşılır?</h3>
+                    <p>Güvenilir bir masaj salonu için dikkat etmeniz gereken bazı noktalar vardır:</p>
+                    
+                    <ul>
+                        <li>Terapistlerin sertifikalı ve deneyimli olması</li>
+                        <li>Salonun hijyenik ve temiz olması</li>
+                        <li>Kullanılan malzemelerin tek kullanımlık veya steril olması</li>
+                        <li>Fiyat politikasının şeffaf olması</li>
+                        <li>Müşteri yorumlarının olumlu olması</li>
+                    </ul>
+                    
+                    <p><strong>Esenyurt masaj salonu</strong> arayışında olanlar veya <strong>Beylikdüzü masaj numarası</strong> ihtiyacı olanlar için <strong>0501 549 55 75</strong> numarası her zaman en güvenilir çözümdür. Uzman terapistlerimiz ve hijyenik salonumuzla Esenyurt ve Beylikdüzü'nün her noktasına hızlı, güvenli ve konforlu masaj hizmeti sağlıyoruz.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Hızlı İletişim için:</h4>
+                        <p><strong>Telefon:</strong> 0501 549 55 75</p>
+                        <p><strong>Çalışma Saatleri:</strong> 7/24 Kesintisiz Hizmet</p>
+                        <p><strong>Hizmet Bölgesi:</strong> Esenyurt, Beylikdüzü ve çevre bölgeler</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sıkça Sorulan Sorular</h2>
+                <p>Masaj hizmetlerimizle ilgili en çok sorulan sorular ve cevapları</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>7/24 hizmet veriyor musunuz?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Evet, Velora Masaj olarak 7 gün 24 saat kesintisiz hizmet veriyoruz. Gece, hafta sonu ve resmi tatiller dahil her zaman arayabilirsiniz.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Masaj seansları ne kadar sürüyor?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Standart masaj seanslarımız 45-60 dakika sürmektedir. İhtiyacınıza göre 90 dakikalık özel seanslar da düzenleyebiliyoruz.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Randevu almadan gelebilir miyim?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Öncelikli olarak randevu sistemiyle çalışıyoruz. Ancak müsaitlik durumuna göre randevusuz misafirlerimizi de kabul edebiliyoruz. Beklememek için önceden aramanızı öneririz.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Kredi kartı ile ödeme yapabilir miyim?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Evet, kredi kartı ile ödeme yapabilirsiniz. Nakit ödeme seçeneği de mevcuttur.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Masajın herhangi bir yan etkisi var mı?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Profesyonel ellerde uygulanan masajın genellikle yan etkisi yoktur. Ancak bazı kronik rahatsızlıklarınız varsa, seans öncesinde terapistinizi bilgilendirmeniz önemlidir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>İletişim</h2>
+                <p>Masaj ihtiyaçlarınız için bize ulaşın, en kısa sürede size dönüş yapalım.</p>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Telefon</h3>
+                    <p>0501 549 55 75</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>0501 549 55 75</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Hizmet Bölgemiz</h3>
+                    <p>Esenyurt & Beylikdüzü</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Çalışma Saatleri</h3>
+                    <p>7/24 Kesintisiz Hizmet</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Popular Searches Section -->
+    <section class="popular-searches" id="popular-searches">
+        <div class="container">
+            <div class="section-title">
+                <h2>Popüler Aramalar</h2>
+                <p>Esenyurt ve Beylikdüzü'nde masaj hizmetleriyle ilgili en çok aranan konular</p>
+            </div>
+            
+            <div class="searches-container">
+                <a href="#seo-article" class="search-tag">
+                    <i class="fas fa-search"></i> Esenyurt Masaj
+                </a>
+                <a href="#seo-article" class="search-tag">
+                    <i class="fas fa-search"></i> Beylikdüzü Masaj
+                </a>
+                <a href="#seo-article" class="search-tag">
+                    <i class="fas fa-search"></i> Esenyurt Masaj Salonu
+                </a>
+                <a href="#seo-article" class="search-tag">
+                    <i class="fas fa-search"></i> Beylikdüzü Masaj Hizmeti
+                </a>
+                <a href="#seo-article" class="search-tag">
+                    <i class="fas fa-search"></i> Esenyurt Masaj Numarası
+                </a>
+                <a href="#services" class="search-tag">
+                    <i class="fas fa-search"></i> Klasik Masaj
+                </a>
+                <a href="#services" class="search-tag">
+                    <i class="fas fa-search"></i> Aromaterapi
+                </a>
+                <a href="#services" class="search-tag">
+                    <i class="fas fa-search"></i> Derin Doku Masajı
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Velora <span>Masaj</span></div>
+            <p>Esenyurt ve Beylikdüzü'nün en güvenilir masaj salonu. Hijyenik ortam, uzman terapistler ve uygun fiyat garantisiyle 7/24 hizmetinizdeyiz.</p>
+            
+            <div class="footer-copyright">
+                &copy; 2025 Velora Masaj - 0501 549 55 75. Tüm hakları saklıdır.
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Floating Action Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/905015495575?text=Merhaba,%20Velora%20Masaj.%20Esenyurt%20veya%20Beylikdüzü'nde%20randevu%20almak%20istiyorum." class="floating-btn whatsapp" target="_blank" title="WhatsApp ile iletişim">
+            <div class="whatsapp-tooltip">Randevu için yazın</div>
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:905015495575" class="floating-btn call" title="Telefon ile ara">
+            <i class="fas fa-phone"></i>
+        </a>
     </div>
-  </header>
-
-  <div class="fixed-buttons">
-    <a href="tel:+905015495575" class="fixed-btn phone" aria-label="Hemen Ara">📞</a>
-    <a href="https://wa.me/905015495575" target="_blank" class="fixed-btn whatsapp" aria-label="WhatsApp">💬</a>
-  </div>
-
-  <main>
-    <!-- 1 Hero -->
-    <section id="hero" class="container" style="padding-top: 3rem; padding-bottom: 5rem;">
-      <div class="fade-up">
-        <h1>Esenyurt & Beylikdüzü<br>Profesyonel Masaj Hizmeti</h1>
-        <p style="font-size: 1.5rem; font-weight: 300; max-width: 700px;">Masaj ile yenilenin, uzman terapistlerle rahatlayın.</p>
-        <div class="btn-group">
-          <a href="tel:+905015495575" class="btn btn-primary">📞 Hemen Ara</a>
-          <a href="https://wa.me/905015495575" target="_blank" class="btn btn-wa">💬 WhatsApp</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 2 Hizmetler -->
-    <section id="hizmetler" class="container">
-      <h2 class="fade-up">Masaj Çeşitlerimiz</h2>
-      <div class="section-subhead fade-up">Size özel dokunuşlar, tamamen profesyonel</div>
-      <div class="card-grid">
-        <div class="card fade-up"><div class="icon-badge">💆‍♂️</div><h3>Klasik Masaj</h3><p>Geleneksel tekniklerle tüm vücut rahatlaması, stres azaltıcı etki.</p></div>
-        <div class="card fade-up"><div class="icon-badge">🧘</div><h3>Relax Masaj</h3><p>Yumuşak dokunuşlarla zihin ve beden gevşemesi, huzurlu bir deneyim.</p></div>
-        <div class="card fade-up"><div class="icon-badge">🌸</div><h3>Aromaterapi Masajı</h3><p>Doğal yağlar eşliğinde duyulara hitap eden, yenileyici terapi.</p></div>
-        <div class="card fade-up"><div class="icon-badge">💪</div><h3>Derin Doku Masajı</h3><p>Kronik gerginliklere yönelik, kasları hedef alan güçlü masaj.</p></div>
-      </div>
-    </section>
-
-    <!-- GÖRSEL -->
-    <div class="container" style="padding-top: 0; padding-bottom: 0;">
-      <img class="full-width-image fade-up" src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1200&q=80&auto=format" alt="Profesyonel masaj uygulaması" loading="lazy">
-    </div>
-
-    <!-- 3 Neden Velora -->
-    <section id="neden" class="container">
-      <h2 class="fade-up">Neden Velora Masaj?</h2>
-      <div class="card-grid">
-        <div class="card fade-up"><div class="icon-badge">🏅</div><h3>Profesyonel Hizmet</h3><p>Sertifikalı terapistler, alanında uzun yıllara dayanan deneyim.</p></div>
-        <div class="card fade-up"><div class="icon-badge">🧼</div><h3>Hijyenik Ortam</h3><p>Her seanstan sonra dezenfekte edilen özel masaj odaları.</p></div>
-        <div class="card fade-up"><div class="icon-badge">👥</div><h3>Deneyimli Terapistler</h3><p>10+ yıl tecrübeli, sürekli eğitim alan profesyonel ekip.</p></div>
-        <div class="card fade-up"><div class="icon-badge">⚡</div><h3>Hızlı Randevu</h3><p>Telefonla anında randevu, beklemeden hizmet.</p></div>
-      </div>
-    </section>
-
-    <!-- 4 Hizmet Bölgeleri (SEO metni) 950 karakter -->
-    <section id="bolgeler" class="container">
-      <h2 class="fade-up">Hizmet Bölgelerimiz: Esenyurt & Beylikdüzü</h2>
-      <div class="region-text fade-up">
-        <p><strong>Esenyurt masaj</strong> denince akla ilk gelen adres Velora Masaj. Esenyurt'un merkezi noktalarında, Talatpaşa, İncirtepe ve Saadetdere mahallelerinde sizlere profesyonel masaj hizmeti sunuyoruz. Modern ve hijyenik stüdyomuzda klasik masajdan aromaterapiye kadar birçok seçenekle rahatlayın. Esenyurt masaj salonu arayanlar için lüks ve konforlu bir deneyim.</p>
-        <p style="margin-top: 1.2rem;"><strong>Beylikdüzü masaj</strong> hizmetimiz ise Beylikdüzü merkez başta olmak üzere Marmara Park, Gürpınar ve Yakuplu bölgelerini kapsar. Beylikdüzü masaj salonu denince akla ilk gelen adresiz. Profesyonel terapistlerimiz ile size özel çözümler sunuyoruz. Her iki bölgede de hızlı randevu imkanı.</p>
-        <p style="margin-top: 1.2rem;">Bölgenizde size en yakın konumda randevunuzu oluşturalım. Esenyurt masaj, Beylikdüzü masaj hizmeti için hemen arayın. Uzman ekibimiz ile şimdiden rahatlamaya hazır olun. Misyonumuz: Hijyen, konfor ve memnuniyet.</p>
-      </div>
-    </section>
-
-    <!-- 5 Müşteri Yorumları -->
-    <section id="yorumlar" class="container">
-      <h2 class="fade-up">Müşteri Yorumları</h2>
-      <div class="card-grid">
-        <div class="testimonial-card fade-up"><div class="stars">★★★★★</div><p>“Esenyurt'ta bulduğum en iyi masaj salonu. Kesinlikle profesyonel ve hijyenik. Derin doku masajı harikaydı.”</p><div class="customer-name">— Mehmet S.</div></div>
-        <div class="testimonial-card fade-up"><div class="stars">★★★★★</div><p>“Beylikdüzü'nde yaşıyorum, aromaterapi masajı için uğradım. Çok rahatlatıcı, terapistler çok deneyimli.”</p><div class="customer-name">— Elif K.</div></div>
-        <div class="testimonial-card fade-up"><div class="stars">★★★★★</div><p>“Hızlı randevu, güler yüz, temizlik… Velora Masaj her şeyiyle 10 numara. Kesinlikle tavsiye ederim.”</p><div class="customer-name">— Ahmet T.</div></div>
-      </div>
-    </section>
-
-    <!-- 6 MAKALELER BÖLÜMÜ - 800-1000 karakterlik 3 farklı SEO makalesi -->
-    <section id="makaleler" class="container">
-      <h2 class="fade-up">Masaj ve Sağlık Üzerine</h2>
-      <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-        <!-- Makale 1: Klasik masaj faydaları ~900 karakter -->
-        <div class="article-text fade-up" style="padding: 2rem;">
-          <h3 style="color: #0d4c61;">Klasik Masajın Vücuda Faydaları</h3>
-          <p>Klasik masaj, kas gerginliğini azaltan ve kan dolaşımını hızlandıran en eski terapi yöntemlerinden biridir. Düzenli olarak uygulandığında stres hormonlarını düşürür, lenfatik sistemi harekete geçirir ve bağışıklığı güçlendirir. Özellikle Esenyurt masaj salonu arayanlar için klasik masaj, bel ve boyun ağrılarında hızlı rahatlama sağlar. Ayrıca uyku kalitesini artırır ve zihinsel yorgunluğu alır. Velora Masaj'da klasik masaj, tamamen hijyenik ortamda ve uzman terapistler eşliğinde sunulmaktadır. Haftada bir yapılan 45 dakikalık seans, vücut direncini artırır ve kasları güçlendirir. Esenyurt masaj hizmetimiz ile günün yorgunluğunu atabilir, daha dinç hissedebilirsiniz.</p>
-        </div>
-        <!-- Makale 2: Aromaterapi ve relaks etkisi ~950 karakter -->
-        <div class="article-text fade-up" style="padding: 2rem;">
-          <h3 style="color: #0d4c61;">Aromaterapi Masajı ile Ruhsal Yenilenme</h3>
-          <p>Aromaterapi masajı, bitkisel yağların iyileştirici gücünü masaj tekniğiyle birleştirir. Lavanta, nane, okaliptüs gibi doğal yağlar sayesinde kaygı seviyesi düşer, zihin dinginleşir. Beylikdüzü masaj hizmetimizde kullandığımız %100 doğal yağlar, cilt tarafından emilerek kaslardaki toksinlerin atılmasına yardımcı olur. Özellikle yoğun iş temposunda olanlar için ideal bir terapidir. Aromaterapi, aynı zamanda sinüsleri açar, baş ağrısını hafifletir ve solunumu düzenler. Beylikdüzü masaj salonu deneyiminizde size özel karışımlar ile rahatlayın. Düzenli seanslar depresyon semptomlarını azaltır ve enerji seviyesini yükseltir. Velora Masaj'da aromaterapiyi mutlaka deneyin.</p>
-        </div>
-        <!-- Makale 3: Derin doku masajı sporcular için ~880 karakter -->
-        <div class="article-text fade-up" style="padding: 2rem;">
-          <h3 style="color: #0d4c61;">Derin Doku Masajı ile Spor Performansı</h3>
-          <p>Derin doku masajı, kasların en derin katmanlarına odaklanır. Özellikle spor yapanlar, düzenli antrenman yapanlar için kas liflerini onarır, sakatlanma riskini azaltır. Kronik ağrılar, fibromiyalji ve duruş bozukluklarında da oldukça etkilidir. Esenyurt masaj ve Beylikdüzü masaj hizmeti kapsamında sunduğumuz derin doku masajı, kan akışını hızlandırarak iyileşme sürecini kısaltır. Uygulama sırasında terapistlerimiz baskıyı ihtiyaca göre ayarlar. Düzenli seanslar ile vücut daha esnek hale gelir, laktik asit birikimi önlenir. Velora Masaj'da derin doku masajı, deneyimli ekibimiz ve hijyenik ortamda yapılır. Hemen randevu alın, farkı hissedin.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7 İletişim -->
-    <section id="iletisim" class="container" style="padding-bottom: 4rem;">
-      <h2 class="fade-up">İletişim</h2>
-      <div class="contact-visual-row fade-up" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
-        <div class="contact-info" style="flex: 1 1 300px;">
-          <p style="font-weight: 600; font-size: 1.8rem;">📞 <a href="tel:+905015495575" style="text-decoration: none; color:#0b4f63;">0501 549 55 75</a></p>
-          <p style="font-size: 1.4rem;">📍 Esenyurt / Beylikdüzü</p>
-          <div class="btn-group" style="margin-top: 1.5rem;">
-            <a href="tel:+905015495575" class="btn btn-primary">Hemen Ara</a>
-            <a href="https://wa.me/905015495575" target="_blank" class="btn btn-wa">WhatsApp Yaz</a>
-          </div>
-        </div>
-        <div style="flex: 1 1 300px; background: rgba(255,255,255,0.3); border-radius: 40px; padding: 2rem; backdrop-filter: blur(5px);">
-          <p style="font-weight: 400;">✉️ info@veloramasaj.online</p>
-          <p style="font-weight: 400;">🕒 Hafta içi 10:00 - 22:00</p>
-          <p style="font-weight: 400;">Cumartesi-Pazar açık</p>
-          <p style="font-weight: 400; margin-top: 1rem;">📱 WhatsApp'tan 7/24 randevu alın.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer-note">
-    <p>© 2025 Velora Masaj | Esenyurt & Beylikdüzü Profesyonel Masaj Hizmeti</p>
-  </footer>
-
-  <!-- JSON-LD LocalBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Velora Masaj",
-    "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200",
-    "url": "https://veloramasaj.online",
-    "telephone": "+905015495575",
-    "priceRange": "₺₺",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Esenyurt",
-      "addressRegion": "İstanbul",
-      "addressCountry": "TR"
-    },
-    "areaServed": [
-      {"@type": "City", "name": "Esenyurt"},
-      {"@type": "City", "name": "Beylikdüzü"}
-    ],
-    "description": "Esenyurt ve Beylikdüzü masaj hizmetleri. Profesyonel masaj deneyimi için Velora Masaj ile iletişime geçin.",
-    "openingHours": "Mo-Su 10:00-22:00"
-  }
-  </script>
-
-  <!-- Scroll animasyonu observer -->
-  <script>
-    (function() {
-      const fadeElements = document.querySelectorAll('.fade-up');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            observer.unobserve(entry.target);
-          }
+    
+    <script>
+        // Mobile Navigation Toggle
+        const mobileNavToggle = document.getElementById('mobileNavToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileNavClose = document.getElementById('mobileNavClose');
+        
+        mobileNavToggle.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+            document.body.style.overflow = 'hidden';
         });
-      }, { threshold: 0.2, rootMargin: '0px 0px -20px 0px' });
-      fadeElements.forEach(el => observer.observe(el));
-    })();
-  </script>
+        
+        mobileNavClose.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close mobile nav when clicking on a link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Close other open answers
+                document.querySelectorAll('.faq-answer.active').forEach(activeAnswer => {
+                    if (activeAnswer !== answer) {
+                        activeAnswer.classList.remove('active');
+                        activeAnswer.previousElementSibling.querySelector('i').classList.remove('fa-chevron-up');
+                        activeAnswer.previousElementSibling.querySelector('i').classList.add('fa-chevron-down');
+                    }
+                });
+                
+                // Toggle current answer
+                answer.classList.toggle('active');
+                
+                // Toggle icon
+                if (answer.classList.contains('active')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(44, 62, 80, 0.98)';
+                header.style.padding = '12px 0';
+                header.style.backdropFilter = 'blur(15px)';
+            } else {
+                header.style.backgroundColor = 'rgba(44, 62, 80, 0.95)';
+                header.style.padding = '18px 0';
+                header.style.backdropFilter = 'blur(10px)';
+            }
+        });
+        
+        // WhatsApp otomatik mesaj
+        const whatsappTooltip = document.querySelector('.whatsapp-tooltip');
+        
+        // Popüler arama etiketlerine hover efekti
+        const searchTags = document.querySelectorAll('.search-tag');
+        
+        searchTags.forEach(tag => {
+            tag.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            tag.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+        
+        // Gallery image fallback
+        const galleryImages = document.querySelectorAll('.gallery-item img');
+        galleryImages.forEach(img => {
+            img.addEventListener('error', function() {
+                this.src = 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80&auto=format';
+            });
+        });
+    </script>
 </body>
 </html>
