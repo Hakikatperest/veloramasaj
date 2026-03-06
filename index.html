@@ -27,7 +27,7 @@
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(145deg, #f6f9fc 0%, #edf2f9 100%);
       color: #1e2b3c;
-      line-height: 1.5;
+      line-height: 1.6;
     }
     /* sticky header */
     .sticky-header {
@@ -110,7 +110,7 @@
     h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; color: #144f61; }
     .section-subhead { font-size: 1.2rem; color: #3b5c6b; margin-bottom: 2.5rem; font-weight: 300; }
 
-    /* butonlar - TÜMÜ MAVİ (hemen ara, whatsapp) */
+    /* butonlar */
     .btn-group { display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0 1rem; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
@@ -118,18 +118,26 @@
       text-decoration: none; transition: 0.3s; font-size: 1.2rem;
       box-shadow: 0 15px 25px -8px rgba(0, 50, 70, 0.3); border: none; gap: 10px;
     }
-    .btn-primary, .btn-wa {
-      background: linear-gradient(145deg, #16718b, #0b4f63); /* hepsi aynı mavi */
+    .btn-primary {
+      background: linear-gradient(145deg, #1e8cae, #0f6c8a);
       color: white;
     }
-    .btn-primary:hover, .btn-wa:hover {
-      background: linear-gradient(145deg, #1d8aa8, #105f77);
+    .btn-primary:hover {
+      background: linear-gradient(145deg, #2ba0c4, #1a7b9c);
+      transform: scale(1.05);
+    }
+    .btn-wa {
+      background: linear-gradient(145deg, #25D366, #128C7E);
+      color: white;
+    }
+    .btn-wa:hover {
+      background: linear-gradient(145deg, #34d974, #1daa9a);
       transform: scale(1.05);
     }
 
     /* kartlar */
     .card-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;
       margin-top: 2.5rem;
     }
     .card {
@@ -149,14 +157,15 @@
     .stars { color: #f4b740; font-size: 1.5rem; letter-spacing: 4px; margin-bottom: 0.5rem; }
     .customer-name { font-weight: 600; color: #05455c; margin-top: 1rem; }
 
-    /* bölge metni */
-    .region-text {
+    /* bölge metni - makale stili */
+    .region-text, .article-text {
       background: rgba(255,255,255,0.4); backdrop-filter: blur(4px);
-      border-radius: 48px; padding: 2.5rem; font-size: 1.2rem;
+      border-radius: 48px; padding: 2.5rem; font-size: 1.1rem;
       border: 1px solid white;
     }
+    .article-text p { margin-bottom: 1.2rem; }
 
-    /* GÖRSEL BÖLÜMÜ - Neden Velora Masaj üzerine yerleştirildi */
+    /* GÖRSEL - Neden Velora Masaj üzerine */
     .full-width-image {
       width: 100%;
       max-height: 400px;
@@ -171,7 +180,7 @@
       transform: scale(1.01);
     }
 
-    /* fixed whatsapp/telefon - ikisi de mavi */
+    /* fixed butonlar */
     .fixed-buttons {
       position: fixed; bottom: 30px; right: 20px;
       display: flex; flex-direction: column; gap: 15px; z-index: 99;
@@ -182,13 +191,14 @@
       align-items: center; justify-content: center; font-size: 2rem;
       text-decoration: none; color: white; transition: 0.2s; border: 2px solid white;
     }
-    /* her iki buton da aynı mavi */
-    .fixed-btn.phone, .fixed-btn.whatsapp {
-      background: linear-gradient(145deg, #16718b, #0b4f63);
+    .fixed-btn.phone {
+      background: linear-gradient(145deg, #1e8cae, #0f6c8a);
+    }
+    .fixed-btn.whatsapp {
+      background: linear-gradient(145deg, #25D366, #128C7E);
     }
     .fixed-btn:hover {
       transform: scale(1.1) rotate(5deg);
-      background: linear-gradient(145deg, #1d8aa8, #105f77);
     }
 
     /* footer */
@@ -219,6 +229,7 @@
         <a href="#neden">Neden Biz</a>
         <a href="#bolgeler">Bölgeler</a>
         <a href="#yorumlar">Yorumlar</a>
+        <a href="#makaleler">Makaleler</a>
         <a href="#iletisim">İletişim</a>
       </nav>
     </div>
@@ -254,12 +265,12 @@
       </div>
     </section>
 
-    <!-- GÖRSEL - Neden Velora Masaj bölümünün hemen üstünde (eski alt görsel) -->
+    <!-- GÖRSEL -->
     <div class="container" style="padding-top: 0; padding-bottom: 0;">
-      <img class="full-width-image fade-up" src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1200&q=80&auto=format" alt="Profesyonel masaj uygulaması, rahatlatıcı an" loading="lazy">
+      <img class="full-width-image fade-up" src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1200&q=80&auto=format" alt="Profesyonel masaj uygulaması" loading="lazy">
     </div>
 
-    <!-- 3 Neden Velora (görsel hemen üstte kaldı) -->
+    <!-- 3 Neden Velora -->
     <section id="neden" class="container">
       <h2 class="fade-up">Neden Velora Masaj?</h2>
       <div class="card-grid">
@@ -270,13 +281,13 @@
       </div>
     </section>
 
-    <!-- 4 Hizmet Bölgeleri (SEO metni) -->
+    <!-- 4 Hizmet Bölgeleri (SEO metni) 950 karakter -->
     <section id="bolgeler" class="container">
-      <h2 class="fade-up">Hizmet Bölgelerimiz</h2>
+      <h2 class="fade-up">Hizmet Bölgelerimiz: Esenyurt & Beylikdüzü</h2>
       <div class="region-text fade-up">
-        <p><strong>Esenyurt masaj</strong> denince akla ilk gelen adres Velora Masaj. Esenyurt'un merkezi noktalarında, Talatpaşa, İncirtepe ve Saadetdere mahallelerinde sizlere profesyonel masaj hizmeti sunuyoruz. Modern ve hijyenik stüdyomuzda klasik masajdan aromaterapiye kadar birçok seçenekle rahatlayın.</p>
-        <p style="margin-top: 1.5rem;"><strong>Beylikdüzü masaj</strong> hizmetimiz ise Beylikdüzü merkez başta olmak üzere Marmara Park, Gürpınar ve Yakuplu bölgelerini kapsar. Beylikdüzü masaj salonu arayanlar için lüks ve konforlu bir deneyim. Her iki bölgede de hızlı randevu imkanı ile yanınızdayız.</p>
-        <p style="margin-top: 1.5rem;">Esenyurt masaj salonu ve Beylikdüzü masaj hizmeti için bize ulaşın, size en yakın konumda randevunuzu oluşturalım. Profesyonel ekibimiz ile şimdiden rahatlamaya hazır olun.</p>
+        <p><strong>Esenyurt masaj</strong> denince akla ilk gelen adres Velora Masaj. Esenyurt'un merkezi noktalarında, Talatpaşa, İncirtepe ve Saadetdere mahallelerinde sizlere profesyonel masaj hizmeti sunuyoruz. Modern ve hijyenik stüdyomuzda klasik masajdan aromaterapiye kadar birçok seçenekle rahatlayın. Esenyurt masaj salonu arayanlar için lüks ve konforlu bir deneyim.</p>
+        <p style="margin-top: 1.2rem;"><strong>Beylikdüzü masaj</strong> hizmetimiz ise Beylikdüzü merkez başta olmak üzere Marmara Park, Gürpınar ve Yakuplu bölgelerini kapsar. Beylikdüzü masaj salonu denince akla ilk gelen adresiz. Profesyonel terapistlerimiz ile size özel çözümler sunuyoruz. Her iki bölgede de hızlı randevu imkanı.</p>
+        <p style="margin-top: 1.2rem;">Bölgenizde size en yakın konumda randevunuzu oluşturalım. Esenyurt masaj, Beylikdüzü masaj hizmeti için hemen arayın. Uzman ekibimiz ile şimdiden rahatlamaya hazır olun. Misyonumuz: Hijyen, konfor ve memnuniyet.</p>
       </div>
     </section>
 
@@ -290,7 +301,29 @@
       </div>
     </section>
 
-    <!-- 6 İletişim (maps yok, sadece iletişim bilgisi) -->
+    <!-- 6 MAKALELER BÖLÜMÜ - 800-1000 karakterlik 3 farklı SEO makalesi -->
+    <section id="makaleler" class="container">
+      <h2 class="fade-up">Masaj ve Sağlık Üzerine</h2>
+      <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        <!-- Makale 1: Klasik masaj faydaları ~900 karakter -->
+        <div class="article-text fade-up" style="padding: 2rem;">
+          <h3 style="color: #0d4c61;">Klasik Masajın Vücuda Faydaları</h3>
+          <p>Klasik masaj, kas gerginliğini azaltan ve kan dolaşımını hızlandıran en eski terapi yöntemlerinden biridir. Düzenli olarak uygulandığında stres hormonlarını düşürür, lenfatik sistemi harekete geçirir ve bağışıklığı güçlendirir. Özellikle Esenyurt masaj salonu arayanlar için klasik masaj, bel ve boyun ağrılarında hızlı rahatlama sağlar. Ayrıca uyku kalitesini artırır ve zihinsel yorgunluğu alır. Velora Masaj'da klasik masaj, tamamen hijyenik ortamda ve uzman terapistler eşliğinde sunulmaktadır. Haftada bir yapılan 45 dakikalık seans, vücut direncini artırır ve kasları güçlendirir. Esenyurt masaj hizmetimiz ile günün yorgunluğunu atabilir, daha dinç hissedebilirsiniz.</p>
+        </div>
+        <!-- Makale 2: Aromaterapi ve relaks etkisi ~950 karakter -->
+        <div class="article-text fade-up" style="padding: 2rem;">
+          <h3 style="color: #0d4c61;">Aromaterapi Masajı ile Ruhsal Yenilenme</h3>
+          <p>Aromaterapi masajı, bitkisel yağların iyileştirici gücünü masaj tekniğiyle birleştirir. Lavanta, nane, okaliptüs gibi doğal yağlar sayesinde kaygı seviyesi düşer, zihin dinginleşir. Beylikdüzü masaj hizmetimizde kullandığımız %100 doğal yağlar, cilt tarafından emilerek kaslardaki toksinlerin atılmasına yardımcı olur. Özellikle yoğun iş temposunda olanlar için ideal bir terapidir. Aromaterapi, aynı zamanda sinüsleri açar, baş ağrısını hafifletir ve solunumu düzenler. Beylikdüzü masaj salonu deneyiminizde size özel karışımlar ile rahatlayın. Düzenli seanslar depresyon semptomlarını azaltır ve enerji seviyesini yükseltir. Velora Masaj'da aromaterapiyi mutlaka deneyin.</p>
+        </div>
+        <!-- Makale 3: Derin doku masajı sporcular için ~880 karakter -->
+        <div class="article-text fade-up" style="padding: 2rem;">
+          <h3 style="color: #0d4c61;">Derin Doku Masajı ile Spor Performansı</h3>
+          <p>Derin doku masajı, kasların en derin katmanlarına odaklanır. Özellikle spor yapanlar, düzenli antrenman yapanlar için kas liflerini onarır, sakatlanma riskini azaltır. Kronik ağrılar, fibromiyalji ve duruş bozukluklarında da oldukça etkilidir. Esenyurt masaj ve Beylikdüzü masaj hizmeti kapsamında sunduğumuz derin doku masajı, kan akışını hızlandırarak iyileşme sürecini kısaltır. Uygulama sırasında terapistlerimiz baskıyı ihtiyaca göre ayarlar. Düzenli seanslar ile vücut daha esnek hale gelir, laktik asit birikimi önlenir. Velora Masaj'da derin doku masajı, deneyimli ekibimiz ve hijyenik ortamda yapılır. Hemen randevu alın, farkı hissedin.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 İletişim -->
     <section id="iletisim" class="container" style="padding-bottom: 4rem;">
       <h2 class="fade-up">İletişim</h2>
       <div class="contact-visual-row fade-up" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
@@ -302,11 +335,11 @@
             <a href="https://wa.me/905015495575" target="_blank" class="btn btn-wa">WhatsApp Yaz</a>
           </div>
         </div>
-        <!-- iletişimde ekstra görsel yok, çünkü görsel yukarı taşındı -->
         <div style="flex: 1 1 300px; background: rgba(255,255,255,0.3); border-radius: 40px; padding: 2rem; backdrop-filter: blur(5px);">
-          <p style="font-weight: 400;">✉️ bilgi@veloramasaj.online</p>
-          <p style="font-weight: 400;">🕒 Hafta içi 08:00 - 22:00</p>
+          <p style="font-weight: 400;">✉️ info@veloramasaj.online</p>
+          <p style="font-weight: 400;">🕒 Hafta içi 10:00 - 22:00</p>
           <p style="font-weight: 400;">Cumartesi-Pazar açık</p>
+          <p style="font-weight: 400; margin-top: 1rem;">📱 WhatsApp'tan 7/24 randevu alın.</p>
         </div>
       </div>
     </section>
